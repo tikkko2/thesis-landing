@@ -1,25 +1,45 @@
 import React from 'react';
-import { Play, Github, FileText } from 'lucide-react';
+import { Github, FileText } from 'lucide-react';
 
 const ThesisLanding = () => {
-  const VideoComparison = ({ title, description, originalVideo, resultUrl }: { title: string, description: string, originalVideo: string, resultUrl: string }) => (
-    <div className="mb-16">
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-3">{title}</h2>
-        <p className="text-gray-600 leading-relaxed max-w-4xl">{description}</p>
-      </div>
-
-      <div className="grid md:grid-cols-2">
-        <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <video src={originalVideo} autoPlay muted loop className="w-full h-full object-cover" />
+  // Get the base path for GitHub Pages
+  const basePath = process.env.NODE_ENV === 'production' ? '/thesis-landing' : '';
+  
+  const VideoComparison = ({ title, description, originalVideo, resultUrl }: { title: string, description: string, originalVideo: string, resultUrl: string }) => {
+    const originalVideoUrl = `${basePath}${originalVideo}`;
+    const resultVideoUrl = `${basePath}${resultUrl}`;
+    
+    return (
+      <div className="mb-16">
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">{title}</h2>
+          <p className="text-gray-600 leading-relaxed max-w-4xl">{description}</p>
         </div>
 
-        <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <video src={resultUrl} autoPlay muted loop className="w-full h-full object-cover" />
+        <div className="grid md:grid-cols-2">
+          <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <video 
+              src={originalVideoUrl} 
+              autoPlay 
+              muted 
+              loop 
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <video 
+              src={resultVideoUrl} 
+              autoPlay 
+              muted 
+              loop 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -56,50 +76,50 @@ const ThesisLanding = () => {
           <VideoComparison
             title="Image Animation using Optical Flow and CIP advection (Test 1)"
             description="Integration of optical flow with CIP advection to animate static digital images. The motion patterns from video input drive the transport of pixel intensities in the target image."
-            originalVideo="/public/test-1/video.mp4"
-            resultUrl="/public/test-1/animated_video.mp4"
+            originalVideo="/test-1/video.mp4"
+            resultUrl="/test-1/animated_video.mp4"
           />
 
           <VideoComparison
             title="Test 2"
             description="Longer video with building image (Wave)"
-            originalVideo="/public/test-2/full_video.mp4"
-            resultUrl="/public/test-2/animated_video02.mp4"
+            originalVideo="/test-2/full_video.mp4"
+            resultUrl="/test-2/animated_video02.mp4"
           />
 
           <VideoComparison
             title="Test 3"
             description="Longer video with nature image (Wave)"
-            originalVideo="/public/test-2/full_video.mp4"
-            resultUrl="/public/test-2/animated_video03.mp4"
+            originalVideo="/test-2/full_video.mp4"
+            resultUrl="/test-2/animated_video03.mp4"
           />
 
           <VideoComparison
             title="Test 4"
             description="Video with building image (Wave 2)"
-            originalVideo="/public/test-3/wave02.mp4"
-            resultUrl="/public/test-3/animated_video04.mp4"
+            originalVideo="/test-3/wave02.mp4"
+            resultUrl="/test-3/animated_video04.mp4"
           />
 
           <VideoComparison
             title="Test 5"
             description="Video with nature image (Wave 2)"
-            originalVideo="/public/test-3/wave02.mp4"
-            resultUrl="/public/test-3/test03.mp4"
+            originalVideo="/test-3/wave02.mp4"
+            resultUrl="/test-3/test03.mp4"
           />
 
           <VideoComparison
             title="Test 7"
             description="Video with nature image (Flag)"
-            originalVideo="/public/test-4/flag.mp4"
-            resultUrl="/public/test-4/test04.mp4"
+            originalVideo="/test-4/flag.mp4"
+            resultUrl="/test-4/test04.mp4"
           />
 
           <VideoComparison
             title="Test 8"
             description="Video with nature image (Flag)"
-            originalVideo="/public/test-4/flag.mp4"
-            resultUrl="/public/test-4/test05.mp4"
+            originalVideo="/test-4/flag.mp4"
+            resultUrl="/test-4/test05.mp4"
           />
         </div>
 
