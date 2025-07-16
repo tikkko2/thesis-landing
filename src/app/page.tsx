@@ -56,50 +56,50 @@ const ThesisLanding = () => {
           <VideoComparison
             title="Image Animation using Optical Flow and CIP advection (Test 1)"
             description="Integration of optical flow with CIP advection to animate static digital images. The motion patterns from video input drive the transport of pixel intensities in the target image."
-            originalVideo="/test-1/video.mp4"
-            resultUrl="/test-1/animated_video.mp4"
+            originalVideo="/public/test-1/video.mp4"
+            resultUrl="/public/test-1/animated_video.mp4"
           />
 
           <VideoComparison
             title="Test 2"
             description="Longer video with building image (Wave)"
-            originalVideo="/test-2/full_video.mp4"
-            resultUrl="/test-2/animated_video02.mp4"
+            originalVideo="/public/test-2/full_video.mp4"
+            resultUrl="/public/test-2/animated_video02.mp4"
           />
 
           <VideoComparison
             title="Test 3"
             description="Longer video with nature image (Wave)"
-            originalVideo="/test-2/full_video.mp4"
-            resultUrl="/test-2/animated_video03.mp4"
+            originalVideo="/public/test-2/full_video.mp4"
+            resultUrl="/public/test-2/animated_video03.mp4"
           />
 
           <VideoComparison
             title="Test 4"
             description="Video with building image (Wave 2)"
-            originalVideo="/test-3/wave02.mp4"
-            resultUrl="/test-3/animated_video04.mp4"
+            originalVideo="/public/test-3/wave02.mp4"
+            resultUrl="/public/test-3/animated_video04.mp4"
           />
 
           <VideoComparison
             title="Test 5"
             description="Video with nature image (Wave 2)"
-            originalVideo="/test-3/wave02.mp4"
-            resultUrl="/test-3/test03.mp4"
+            originalVideo="/public/test-3/wave02.mp4"
+            resultUrl="/public/test-3/test03.mp4"
           />
 
           <VideoComparison
             title="Test 7"
             description="Video with nature image (Flag)"
-            originalVideo="/test-4/flag.mp4"
-            resultUrl="/test-4/test04.mp4"
+            originalVideo="/public/test-4/flag.mp4"
+            resultUrl="/public/test-4/test04.mp4"
           />
 
           <VideoComparison
             title="Test 8"
             description="Video with nature image (Flag)"
-            originalVideo="/test-4/flag.mp4"
-            resultUrl="/test-4/test05.mp4"
+            originalVideo="/public/test-4/flag.mp4"
+            resultUrl="/public/test-4/test05.mp4"
           />
         </div>
 
