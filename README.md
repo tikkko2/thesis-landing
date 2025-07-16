@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thesis Landing Page
 
-## Getting Started
+A Next.js landing page showcasing digital image animation research using optical flow and CIP advection methods.
 
-First, run the development server:
+## Features
+
+- Video comparisons showing original vs animated results
+- Responsive design with Tailwind CSS
+- Static export for GitHub Pages deployment
+
+## Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment to GitHub Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Setup Steps:
 
-## Learn More
+1. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Source: "GitHub Actions"
 
-To learn more about Next.js, take a look at the following resources:
+2. **Push your code** to the `main` branch - the GitHub Action will automatically build and deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Your site will be available at**: `https://[your-username].github.io/thesis-landing/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Manual Deployment:
 
-## Deploy on Vercel
+If you prefer manual deployment:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Build the project
+npm run build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# The static files will be in the `dist` folder
+# Upload the contents of `dist` to your GitHub Pages branch
+```
+
+## Configuration
+
+The project uses the following Next.js configuration for GitHub Pages:
+
+- `output: "export"` - Creates static files
+- `basePath: "/thesis-landing"` - Matches repository name
+- `trailingSlash: true` - Required for GitHub Pages routing
+- `distDir: "dist"` - Custom output directory
+
+## Video Files
+
+Videos are stored in the `public/` directory and referenced with absolute paths:
+- `/test-1/` - First test videos
+- `/test-2/` - Second test videos  
+- `/test-3/` - Third test videos
+- `/test-4/` - Fourth test videos
+
+Make sure all video files are committed to the repository for them to be available on GitHub Pages.
