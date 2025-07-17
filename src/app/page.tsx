@@ -148,9 +148,6 @@ const ThesisLanding = () => {
             <p className="text-gray-700 leading-relaxed mb-4">
               Keywords: Digital image animation, optical flow, advection equations, CIP method, parameter optimization, computational fluid dynamics, computer vision
             </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Supervisors: Prof. Ramaz Botchorishvili, Dr. Hanno Scharr
-            </p>
           </div>
         </div>
       </main>
