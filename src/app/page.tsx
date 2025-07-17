@@ -134,7 +134,7 @@ const ThesisLanding = () => {
               The methodology combines three classical optical flow algorithms (Horn-Schunck, Lucas-Kanade, and Farneback) with high-order numerical schemes for solving advection equations. Through systematic evaluation on standard geometric test cases (cone, cube, cylinder, half-cylinder), three distinct numerical approaches are compared: upwind difference schemes, semi-Lagrangian methods, and the Constrained Interpolation Profile (CIP) method. The CIP method demonstrates superior performance in preserving sharp features and minimizing numerical diffusion, making it the optimal choice for image transport applications.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              A novel GPU-accelerated PDE solver with parameter optimization capabilities is developed, achieving machine precision accuracy (8.94×10⁻¹¹ final loss) in identifying time-dependent coefficient functions using the L-BFGS-B algorithm. The solver successfully handles inverse problems for spatially varying coefficients on small-scale grids (7×7), though scalability limitations emerge for larger problem sizes.
+              A PDE solver with parameter optimization capabilities is developed, achieving machine precision accuracy (8.94×10⁻¹¹ final loss) in identifying time-dependent coefficient functions using the L-BFGS-B algorithm. The solver successfully handles inverse problems for spatially varying coefficients on small-scale grids (7×7), though scalability limitations emerge for larger problem sizes.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               However, direct application of physics-based transport methods to digital imagery reveals fundamental limitations. The experimental integration of optical flow and CIP advection results in severe visual degradation, with moving regions exhibiting random pixel coloration rather than realistic motion. This failure highlights the inadequacy of treating pixel intensities as passive scalar fields transported by flow fields.
@@ -147,6 +147,9 @@ const ThesisLanding = () => {
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Keywords: Digital image animation, optical flow, advection equations, CIP method, parameter optimization, computational fluid dynamics, computer vision
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Supervisors: Prof. Ramaz Botchorishvili, Dr. Hanno Scharr
             </p>
           </div>
         </div>
